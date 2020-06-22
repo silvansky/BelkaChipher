@@ -95,7 +95,7 @@ track.events << ProgramChange.new(0, 1, 0)
 eighth_note_length = seq.note_to_delta('quarter') / 2
 
 drum_part.each_char { |c| 
-  offset = (c == "0") ? 0 : 2
+  offset = (c == "0") ? 1 : 3
   track.events << NoteOn.new(10, GM_DRUM_NOTE_LOWEST + offset, 127, 0)
   track.events << NoteOff.new(10, GM_DRUM_NOTE_LOWEST + offset, 127, eighth_note_length)
 }
